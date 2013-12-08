@@ -38,6 +38,7 @@ function create_link($params) {
 	return trim($link);
 }
 
+
 class HTML {
 
 	public static function tag($type, $inner, $attributes = null) {

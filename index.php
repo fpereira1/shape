@@ -1,13 +1,18 @@
 <?php
 
-ini_set('display_errors', 1);
+require_once('./config.php');
+require_once('./framework/init.php');
 
-define('THEME', 'default');
+// Setting the theme to be used as HTML
+define('THEME', get_config('theme'));
 
-require_once __DIR__ . '/framework/init.php';
+// TODO: make it work on any subdirectory
+// TODO: Fix harcoded http on $uri
+// TODO: Fix hardcoded index.php
+$params = HTTP::get_request_data();
 
-@list($f, $file, $controller, $action, $id) = explode('/', $_SERVER['REQUEST_URI']);
-$controller = ucfirst($controller ?: 'pages') . 'Controller';
+$controller = ucfirst($params['c'] ?: 'pages') . 'Controller';
 
 // Dispatching the request to the main controller
-$cms = new $controller();
+if(!class_exists($controller)) throw new Exception();
+else new $controller();

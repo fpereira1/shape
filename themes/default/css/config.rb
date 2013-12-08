@@ -1,10 +1,11 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/"
+# http_path = "/~newaccount/peartree.me/"
 css_dir = "."
 sass_dir = "sass"
-http_images_path = "/themes/default/images/gui/"
+images_dir = "../images/gui/"
+# http_images_path = "../images"
 # javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
@@ -12,7 +13,7 @@ http_images_path = "/themes/default/images/gui/"
 output_style = :nested
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-relative_assets = false
+relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false

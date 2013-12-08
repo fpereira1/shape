@@ -3,11 +3,11 @@
 class DefaultController {
 
 	public function __construct() {
-		$this->here = $_SERVER['REQUEST_URI'];
-		@list($f, $file, $controller, $action, $id) = explode('/', $this->here);
 
-		$this->action = $action ?: 'index';
-		$this->id = $id;
+		$params = HTTP::get_request_data();
+
+		$this->action = $params['action'] ?: 'index';
+		$this->id = $params['id'];
 
 		$this->post = $_POST;
 

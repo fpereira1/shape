@@ -4,7 +4,7 @@ class PagesController extends DefaultController {
 
 	public static function css() {
 		$css = array(
-			'/themes/'. THEME . '/css/' . strtolower(THEME) . '.css'
+			'themes/'. THEME . '/css/' . strtolower(THEME) . '.css'
 		);
 
 		foreach ($css as $key => $value) {

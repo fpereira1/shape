@@ -3,15 +3,17 @@
 
 @import "compass";
 
-@font-face { font-family: 'Chopin Script'; src: url("/themes/default/css/fonts/ChopinScript.otf"); }
+@font-face {
+	font-family: 'Chopin Script'; src: url("fonts/ChopinScript.otf");
+}
 
 @mixin chopin() {
 	font-family: 'Chopin Script';
-	font-weight: bold;
 }
-
+ 
 body {
-	@include background(image-url("bg.png"));
+	/*@include background(image-url("bg.png"));*/
+	background-color:#D0FAF3;
 	min-height: 1000px;
 }
 
@@ -19,9 +21,9 @@ body {
 	text-align: center;
 	h1 {
 		@include chopin();
-		font-size:3em;
-		text-shadow:shade(#fff, 20%) 0px 0px 5px;
-		color:#030D4F;
+		font-size:60px;
+		font-weight: normal;
+		color:#20B0B0;
 	}
 }
 
