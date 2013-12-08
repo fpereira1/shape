@@ -1,0 +1,46 @@
+@import url(bootstrap/bootstrap.css);
+@import url(bootstrap/bootstrap-responsive.css);
+@font-face {
+  font-family: 'Chopin Script';
+  src: url("/themes/default/css/fonts/ChopinScript.otf"); }
+
+body {
+  background: url('/themes/default/images/gui/bg.png');
+  min-height: 1000px; }
+
+.header {
+  text-align: center; }
+  .header h1 {
+    font-family: 'Chopin Script';
+    font-weight: bold;
+    font-size: 3em;
+    text-shadow: #cccccc 0px 0px 5px;
+    color: #030D4F; }
+
+.content {
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 6px; }
+  .content .padding {
+    padding: 1em 2em; }
+
+.center {
+  text-align: center; }
+
+.PagesController_index .header {
+  text-align: center; }
+
+.PagesController_photos .container .content {
+  background: transparent !important;
+  text-align: center; }
+  .PagesController_photos .container .content .img-rounded {
+    margin-bottom: 1em; }
+
+.PagesController_contactus, .GuestbookController_index {
+  background: url('/themes/default/images/gui/contact-bg.png'); }
+
+.GuestbookController_index form input[type=text] {
+  width: 260px; }
+.GuestbookController_index form textarea {
+  width: 400px;
+  height: 140px; }

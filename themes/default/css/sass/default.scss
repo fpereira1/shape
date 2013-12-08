@@ -1,0 +1,71 @@
+@import "bootstrap/bootstrap.css";
+@import "bootstrap/bootstrap-responsive.css";
+
+@import "compass";
+
+@font-face { font-family: 'Chopin Script'; src: url("/themes/default/css/fonts/ChopinScript.otf"); }
+
+@mixin chopin() {
+	font-family: 'Chopin Script';
+	font-weight: bold;
+}
+
+body {
+	@include background(image-url("bg.png"));
+	min-height: 1000px;
+}
+
+.header {
+	text-align: center;
+	h1 {
+		@include chopin();
+		font-size:3em;
+		text-shadow:shade(#fff, 20%) 0px 0px 5px;
+		color:#030D4F;
+	}
+}
+
+.content {
+	text-align:justify;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 6px;
+	.padding {
+		padding:1em 2em;
+	}
+}
+
+.center { text-align: center; }
+
+.PagesController_index {
+	.header {
+		text-align:center;
+	}
+}
+
+.PagesController_photos {
+	.container {
+		.content {
+			background: transparent !important;
+			text-align: center;
+			.img-rounded {
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+.PagesController_contactus, .GuestbookController_index{
+	@include background(image-url("contact-bg.png"));
+}
+
+.GuestbookController_index {
+	form {
+		input[type=text] {
+			width: 260px;
+		}
+		textarea {
+			width:400px;
+			height: 140px;
+		}
+	}
+}
