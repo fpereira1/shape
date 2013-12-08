@@ -5,10 +5,14 @@ class Model {
 	public $data;
 
 	public function __construct() {
-		//mysql -u peartree1 -p -h mysql.peartree.me peartreeme_live
-		$link = mysql_connect('mysql.peartree.me', 'peartree1', '1q2w3e');
-		// $link = mysql_connect('localhost', 'peartree1', '1q2w3e');	
-		mysql_select_db('peartreeme_live');
+
+		$link = mysql_connect(
+			get_config('db.host'),
+			get_config('db.user'),
+			get_config('db.pass')
+		);
+
+		mysql_select_db(get_config('db.name'));
 
 		$this->table = strtolower(get_class($this));
 

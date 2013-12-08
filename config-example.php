@@ -4,6 +4,11 @@ $config = array(
 
 	'theme' => 'default',
 
+	'db.host' => 'localhost',
+	'db.user' => '',
+	'db.pass' => '',
+	'db.name' => '',
+
 	/**
 	 * A flag to indicate it's using index.php (without .htaccess)
 	 */
@@ -14,7 +19,7 @@ $config = array(
 	/**
 	 * Base URL is used by the CMS/Framework to render your website
 	 */
-	'base_url' => 'http://192.168.20.103/~newaccount/peartree.me/'
+	'base_url' => 'http://example.com/'
 
 );
 
